@@ -1,14 +1,8 @@
-# 🔭 Scale × ODYSSEY — Astronomical Object Classification
+#  Scale × ODYSSEY — Astronomical Object Classification
 
-> **Summer Projects 2026-27 | Technical Council, IIT Gandhinagar**  
-> Club: SCALE (Machine Learning Club) × ODYSSEY  
-> Stakeholders: Janil Jain, Jaskirat Singh Maskeen, Priyal Keswani
+##  Project Overview
 
----
-
-## 📌 Project Overview
-
-A deep learning pipeline that classifies astronomical images into five major celestial object categories:
+A deep learning pipeline that classifies astronomical images into five major celestial object categories
 
 | Class | Label |
 |-------|-------|
@@ -18,9 +12,7 @@ A deep learning pipeline that classifies astronomical images into five major cel
 | Star Cluster | `star_cluster` |
 | Planetary Object | `planetary` |
 
-The model learns **directly from raw image data** without manually engineered astrophysical features, using transfer learning on EfficientNet-B3, with Grad-CAM visualizations for interpretability.
-
----
+The model learns directly from raw image data without manually engineered astrophysical features, using transfer learning on EfficientNet-B3, with Grad-CAM visualizations for interpretability.
 
 ## 📊 Dataset Sources
 
@@ -36,7 +28,7 @@ The model learns **directly from raw image data** without manually engineered as
 
 ---
 
-## 🏗️ Model Architecture
+##  Model Architecture
 
 ```
 Input Image (224×224×3)
@@ -63,11 +55,11 @@ EfficientNet-B3 Backbone
 **Why EfficientNet-B3?**
 - Strong ImageNet pretraining generalizes well to astronomical textures
 - Compound scaling balances depth/width/resolution efficiently
-- <5s inference on CPU for a single image (requirement met ✅)
+- <5s inference on CPU for a single image 
 
 ---
 
-## 📈 Final Test Metrics
+##  Final Test Metrics
 
 > Evaluated on held-out test set (1,860 images)
 
@@ -88,11 +80,10 @@ EfficientNet-B3 Backbone
 | Star Cluster | 0.82 | 0.80 | 0.81 |
 | Planetary Object | 0.87 | 0.86 | 0.865 |
 
-> ✅ Exceeds the required **80% accuracy threshold**.
 
 ---
 
-## 🔀 Confusion Matrix
+##  Confusion Matrix
 
 ```
                   Predicted →
@@ -108,18 +99,17 @@ Planetary Obj    [   4      3      3       5     315  ]
 
 ---
 
-## ⏱️ Inference Time
+##  Inference Time
 
 | Hardware | Time per Image |
 |----------|---------------|
 | CPU (Intel i5, no GPU) | **2.3s** |
 | GPU (NVIDIA T4) | 0.18s |
-
-✅ Meets the **<5 second** inference requirement on consumer hardware.
+ Meets the **<5 second** inference requirement on consumer hardware.
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 
@@ -184,7 +174,7 @@ python src/gradcam.py --image path/to/image.jpg --checkpoint models/best_model.p
 
 ---
 
-## 🧪 Training Script
+##  Training Script
 
 See [`src/train.py`](src/train.py) — key hyperparameters:
 
@@ -207,7 +197,7 @@ Training uses:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 scale-odyssey/
@@ -236,22 +226,15 @@ scale-odyssey/
 
 ---
 
-## 🔬 Explainability: Grad-CAM
+##  Explainability: Grad-CAM
 
 The model produces Grad-CAM heatmaps to show which image regions drive predictions. See [`src/gradcam.py`](src/gradcam.py) and sample outputs in [`results/gradcam_samples/`](results/gradcam_samples/).
 
 ---
 
-## 🚧 Work In Progress
 
-- [ ] Bonus Task: Image captioning with BLIP
-- [ ] Bonus Task: Anomaly detection for unknown celestial objects
-- [ ] Streamlit web app for interactive inference
-- [ ] Object localization with bounding boxes
 
----
-
-## 👥 Team
+## Team
 
 | Name | Roll No. |
 |------|----------|
