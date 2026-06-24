@@ -60,54 +60,7 @@ EfficientNet-B3 Backbone
 ---
 
 ##  Final Test Metrics
-
-> Evaluated on held-out test set (1,860 images)
-
-| Metric | Value |
-|--------|-------|
-| **Accuracy** | **83.7%** |
-| **Macro Precision** | 0.841 |
-| **Macro Recall** | 0.832 |
-| **Macro F1-Score** | 0.836 |
-
-### Per-Class F1 Scores
-
-| Class | Precision | Recall | F1 |
-|-------|-----------|--------|----|
-| Spiral Galaxy | 0.89 | 0.91 | 0.90 |
-| Elliptical Galaxy | 0.78 | 0.76 | 0.77 |
-| Nebula | 0.85 | 0.84 | 0.845 |
-| Star Cluster | 0.82 | 0.80 | 0.81 |
-| Planetary Object | 0.87 | 0.86 | 0.865 |
-
-
----
-
-##  Confusion Matrix
-
-```
-                  Predicted →
-Actual ↓        Spiral  Ellip  Nebula  StarCl  Planet
-Spiral Galaxy    [ 328     12      4       6       2  ]
-Elliptical       [  18    274     14       8       4  ]
-Nebula           [   5      9    308       8       2  ]
-Star Cluster     [   7     10      9     296       6  ]
-Planetary Obj    [   4      3      3       5     315  ]
-```
-
-*Most confusion: Elliptical galaxies ↔ Spiral galaxies (expected — low-resolution overlap)*
-
----
-
-##  Inference Time
-
-| Hardware | Time per Image |
-|----------|---------------|
-| CPU (Intel i5, no GPU) | **2.3s** |
-| GPU (NVIDIA T4) | 0.18s |
- Meets the **<5 second** inference requirement on consumer hardware.
-
----
+Training in  still in progress
 
 ##  Setup Instructions
 
